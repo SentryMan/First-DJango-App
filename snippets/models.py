@@ -1,7 +1,6 @@
-# Create your models here.
 from django.db import models
 from pygments import highlight 
-from pygments.formatters.html import HtmlFormatter
+from pygments.formatters.html import HtmlFormatter 
 from pygments.lexers import get_all_lexers, get_lexer_by_name 
 from pygments.styles import get_all_styles
 
@@ -23,7 +22,7 @@ class Snippet(models.Model):
     class Meta:
         ordering = ('created',)
 
-    def save(self, *args, **kwargs): 
+    def save(self, *args, **kwargs):
         """
         Use the `pygments` library to create a highlighted HTML
         representation of the code snippet.
